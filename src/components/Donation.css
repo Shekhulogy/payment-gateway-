@@ -32,9 +32,6 @@
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 10px 25px 0 rgba(0, 0, 0, 0.3);
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
   color: #fff;
   
 }
@@ -79,7 +76,6 @@ form {
 
 .sec-2 div {
     width: 80%;
-    /* background-color: red; */
     margin-top: 40px;
     position: relative;
     display: flex;
@@ -94,9 +90,7 @@ form {
 #input-1, #input-2 {
     height: 40px;
     width: 80%;
-    /* margin-top: 40px; */
     padding: 15px;
-    /* padding-left: 40px; */
     border: 1px solid #34ba9f;
     border-radius: 4px;
     outline: none;
@@ -113,18 +107,14 @@ form {
 
 .sec-3 div {
     width: 40%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 
 #input-3 {
     height: 40px;
     width: 60%;
-    /* margin-left: 69px; */
     margin-right: 0;
-    /* margin-top: 40px; */
     padding: 15px;
     border: 1px solid #34ba9f;
     border-radius: 4px;
@@ -135,8 +125,6 @@ form {
 #input-4 {
     height: 40px;
     width: 75%;
-    /* margin-left: -20%; */
-    /* margin-top: 40px; */
     padding: 15px;
     border: 1px solid #34ba9f;
     border-radius: 4px;

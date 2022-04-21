@@ -52,14 +52,15 @@ function Donation() {
     }
 
     const options = {
-      key: "rzp_test_hqK62Jo0VWyt6Y", // Enter the Key ID generated from the Dashboard
-      amount: amount * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      key: "rzp_test_hqK62Jo0VWyt6Y",
+      amount: amount * 100,
       currency: "INR",
       name: "Save wildlife",
       description: "Thank you for your contribution",
       image: logo,
-      //   order_id: "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "https://eneqd3r9zrjok.x.pipedream.net/",
+      handler: function () {
+        alert("Payment Successful !");
+      },
       prefill: {
         name: name,
         email: email,
@@ -80,14 +81,12 @@ function Donation() {
 
       script.onload = async () => {
         resolve(true);
-        const res = await axios.post("http://localhost:8080/invoice", {
+        await axios.post("http://localhost:8080/invoice", {
           name,
           email,
           amount,
           contact,
         });
-
-        const orderID = res.data.order_id;
       };
 
       script.onerror = () => {

@@ -27,8 +27,6 @@ app.get("/order", (req,res) => {
 app.post("/invoice", async (req, res) => {
   const { name, email, amount, contact } = req.body;
 
-  console.log('Amount', typeof amount);
-
   try {
     const invoice = await razorpay.invoices.create({
       type: "invoice",
@@ -47,15 +45,13 @@ app.post("/invoice", async (req, res) => {
       },
     });
     res.status(200).send(invoice);
-    console.log(invoice.order_id);
+    console.log(invoice);
 
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
   }
 });
-
-// razorpay.invoices.issue(invoiceId)
 
 app.listen(8080, () => {
   console.log("listening the port at 8080");
