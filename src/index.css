@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@300&family=Open+Sans&family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+#caption {
+  height: auto;
+  width: auto;
+  padding: 20px;
+  margin-left: 7%;
+  margin-top: 11%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  z-index: 2;
+  position: absolute;
+}
+
+#caption h1 {
+  font-size: 100px;
+  font-weight: 300;
+  animation: slide-up 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+p {
+  font-size: 30px;
+  animation: slide-up 1s ease-out;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.btn-2 {
+  height: 60px;
+  width: 190px;
+  margin-top: 60px;
+  
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  overflow: hidden;
+  transition: 0.1s all ease;
+  animation: slide-up 1s ease-out;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.btn-2:hover {
+  border: none;
+}
+
+.btn-2::before {
+  content: "";
+  background: linear-gradient(to right, #2edb76 5%, #34ba9f);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  transition: 0.5s all ease;
+  opacity: 0;
+}
+
+.btn-2:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+#navbar {
+  height: 70px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  animation: slide-down 1s ease-out;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 50px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-1 {
+  height: 50px;
+  width: 110px;
+  font-size: 18px;
+  border-radius: 50px;
+  margin-left: 55rem;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(to right, #2edb76 5%, #34ba9f);
+  overflow: hidden;
+}
+
+.btn-1::before {
+  content: "";
+  height: 50px;
+  width: 180px;
+  top: 0;
+  left: -80px;
+  background-image: linear-gradient(to right, #34ba9f, #00ff6a, #34ba9f);
+  position: absolute;
+  transition: 0.7s all ease-out;
+}
+
+.btn-1:hover:before {
+  transition: 0.7s all ease-out;
+  left: 0;
+}
+
+.btn-1::after {
+  content: "Donate";
+  height: 50px;
+  width: 110px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slider::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.slides {
+  width: 500%;
+  height: 100vh;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+  
+}
+
+.slide img {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 100vw;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background: #fff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -100%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -120%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 623px;
+}
+
+.navigation-auto div {
+  border: none;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+  background: rgba(0, 0, 0, 0.5);
+}
