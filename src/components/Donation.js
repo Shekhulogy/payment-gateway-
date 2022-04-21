@@ -27,6 +27,7 @@ function Donation() {
   function onSubmit(e) {
     e.preventDefault();
     showRazorPay(info);
+    e.target.reset();
   }
 
   console.log(info);
